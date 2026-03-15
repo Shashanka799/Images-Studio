@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Wedding Photography</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+    .section-space{
+padding:80px 0;
+}
+
+body{
+font-family: Arial;
+scroll-behavior:smooth;
+}
+
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+.hero video{
+position:absolute;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-content{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+color:white;
+text-align:center;
+}
+
+.hero-content h1{
+font-size:60px;
+font-weight:bold;
+text-shadow: 2px 2px 6px black;
+}
+
+.hero-content h4{
+color:white;
+text-shadow: 2px 2px 6px black;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+}
+
+/* .service-box::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+border-radius:15px;
+} */
+
+.service-box h4,
+.service-box p{
+position:relative;
+z-index:1;
+}
+
+.service-box{
+transition:0.4s;
+}
+
+.service-box:hover{
+transform:scale(1.05);
+}
+
+.service-box{
+height:260px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+border-radius:15px;
+background-size:cover;
+background-position:center;
+text-align:center;
+padding:20px;
+position:relative;
+overflow:hidden;
+}
+
+
+
+.wedding{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("wedding.jpg");
+}
+
+.video{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("cinematic.jpg");
+}
+
+.drone{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("drone.jpg");
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+
+
+.package-card{
+transition:0.3s;
+border:2px solid #ddd;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+background:white;
+}
+
+.package-card:hover{
+transform:scale(1.05);
+box-shadow:0 8px 25px rgba(0,0,0,0.2);
+border-color:#ffc107;
+}
+
+.package-card{
+border:2px solid #d4af37;
+}
+
+.package-card{
+transition:0.3s;
+}
+
+.package-card:hover{
+transform:scale(1.05);
+}
+
+.locations{
+height:260px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:white;
+border-radius:15px;
+background-size:cover;
+background-position:center;
+text-align:center;
+padding:20px;
+position:relative;
+overflow:hidden;
+}
+
+.locations{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("location.jpg");
+}
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:22px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO VIDEO -->
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<video autoplay muted loop>
+<source src="wedding-video.mp4" type="video/mp4">
+</video>
+
+<div class="hero-content">
+
+    
+
+<h1>Images Studio</h1>
+
+<h4>Capturing Your Beautiful Moments</h4>
+
+
+
+<a href="#contact" class="btn btn-warning btn-lg">Book Now</a>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+
+
+<section class="container section-space">
+
+<h2 class="text-center mb-5">Our Services</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="service-box wedding">
+<h4>Wedding Photography</h4>
+<p>Candid & Traditional Coverage</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="service-box video">
+<h4>Cinematic Videography</h4>
+<p>High Quality Wedding Films</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="service-box drone">
+<h4>Drone Shoots</h4>
+<p>Beautiful Aerial Wedding Shots</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+
+
+<section class="container section-space">
+
+
+<h2 class="text-center mb-5">Gallery</h2>
+
+<div class="row gallery">
+
+<div class="col-md-4 mb-3">
+<img src="photo1.jpeg">
+</div>
+
+<div class="col-md-4 mb-3">
+<img src="photo3.jpeg">
+</div>
+
+<div class="col-md-4 mb-3">
+<img src="photo2.jpeg">
+</div>
+
+</div>
+
+</section>
+
+<!-- PACKAGES -->
+
+
+
+<section class="container section-space">
+
+<h2 class="text-center mb-5">Packages</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card package-card text-center p-3">
+
+<h4>Basic</h4>
+<p>Photography</p>
+<p>200 Edited Photos</p>
+<p>1 Videographer</p>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card package-card text-center p-3">
+
+<h4>Premium</h4>
+<p>Photography</p>
+<p>Cinematic Video</p>
+<p>Drone Shoot</p>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card package-card text-center p-3">
+
+<h4>Luxury</h4>
+<p>Full Team Coverage</p>
+<p>Pre Wedding Shoot</p>
+<p>Drone + Album</p>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section class="container py-5">
+
+<div class="locations">
+
+<h2>Locations</h2>
+
+<p>Belagutti | Nyamathi | Shivamogga | Bangalore | Davanagere</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="container section-space text-center">
+
+<h2>Contact Us</h2>
+
+
+
+<p>📞 Phone: 7892443608</p>
+
+<a class="Instagram" href="https://www.instagram.com/rk_peace_fighter?igsh=MWRxaWN5c2t3OTlqbA==" target="_blank" title="Instagram">
+    <img src="instagram.png" width="40">
+</a>
+
+<!-- <p>📷 Instagram: @royalweddingfilms</p> -->
+
+</section>
+
+<!-- WHATSAPP BUTTON -->
+
+<a class="whatsapp" href="https://wa.me/917892443608" target="_blank" title="Click to chat with us">
+    <img src="whatsapp.svg" width="40">
+</a>
+
+
+
+
+</body>
+</html>
+
