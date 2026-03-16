@@ -21,6 +21,8 @@ padding:80px 0;
 body{
 font-family: Arial;
 scroll-behavior:smooth;
+background-color: #181818;
+color: white;
 }
 
 .hero{
@@ -69,10 +71,16 @@ font-weight:bold;
 text-shadow: 2px 2px 6px black;
 }
 
-.hero-content h4{
+.hero-content p{
 color:white;
 text-shadow: 2px 2px 6px black;
 }
+
+.btn{
+    color:white;
+}
+
+
 
 .overlay{
 position:absolute;
@@ -116,7 +124,16 @@ transition:0.4s;
 }
 
 .service-box:hover{
-transform:scale(1.05);
+transform:scale(1.04);
+}
+
+.service-box{
+background:#111;
+border:1px solid transparent;
+}
+
+.service-box:hover{
+box-shadow:0 0 30px rgba(0,255,255,0.8);
 }
 
 .service-box{
@@ -126,6 +143,8 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 color:white;
+text-shadow: 2px 2px 6px black;
+
 border-radius:15px;
 background-size:cover;
 background-position:center;
@@ -137,17 +156,56 @@ overflow:hidden;
 
 
 
+.engagement{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("engagement.jpg");
+}
+
+.preweddings{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("prewedding.jpg");
+}
+
 .wedding{
 background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("wedding.jpg");
 }
 
 .video{
 background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("cinematic.jpg");
-}
+}   
 
 .drone{
 background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("drone.jpg");
 }
+
+.maternity{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("maternity.jpg");
+}
+
+.baby{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("baby.jpg");
+}
+
+.naming{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("naming.jpg");
+}
+
+.birthday{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("birthday.jpg");
+}
+
+.house{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("housewarming.jpg")
+}
+
+.car{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("bike.jpg");
+}
+
+.event{
+background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("event.jpg");
+}
+
+
+
 
 .gallery img{
 width:100%;
@@ -167,11 +225,11 @@ background:white;
 .package-card:hover{
 transform:scale(1.05);
 box-shadow:0 8px 25px rgba(0,0,0,0.2);
-border-color:#ffc107;
+border-color:rgba(0,255,255,0.8);
 }
 
 .package-card{
-border:2px solid #d4af37;
+border:2px solid rgba(0,255,255,0.8);
 }
 
 .package-card{
@@ -227,7 +285,6 @@ z-index:999;
 <!-- HERO VIDEO -->
 
 
-
 <section class="hero">
 
 <div class="overlay"></div>
@@ -244,11 +301,11 @@ z-index:999;
 
 <h1>Images Studio</h1>
 
-<h4>Capturing Your Beautiful Moments</h4>
+<p><b>Capturing Your Beautiful Moments</b></p>
 
 
 
-<a href="#contact" class="btn btn-warning btn-lg">Book Now</a>
+<a href="#contact" class="btn btn-info btn-lg"><b>Book Now</b></a>
 
 </div>
 
@@ -261,9 +318,24 @@ z-index:999;
 
 <section class="container section-space">
 
-<h2 class="text-center mb-5">Our Services</h2>
+<h2 class="text-center mb-5"><b>What We Do?</b> </h2>
 
 <div class="row g-4">
+
+
+    <div class="col-md-4">
+<div class="service-box engagement">
+<h4>Engagement</h4>
+<p>Beautiful Aerial Wedding Shots</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="service-box preweddings">
+<h4>Pre Weddings</h4>
+<p>Beautiful Aerial Wedding Shots</p>
+</div>
+</div>
 
 <div class="col-md-4">
 <div class="service-box wedding">
@@ -286,6 +358,58 @@ z-index:999;
 </div>
 </div>
 
+
+<div class="col-md-4">
+<div class="service-box maternity">
+<h4>Maternity</h4>
+<p>Beautiful Aerial Wedding Shots</p>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="service-box baby">
+<h4>Baby Shoot</h4>
+<p>Beautiful Aerial Wedding Shots</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="service-box naming">
+<h4>Naming Ceremony</h4>
+<p>Beautiful Aerial Wedding Shots</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="service-box birthday">
+<h4>Birthday</h4>
+<p>Beautiful Aerial Wedding Shots</p>
+</div>
+</div>
+
+
+<div class="col-md-4">
+<div class="service-box house">
+<h4>House Warming</h4>
+<p>Beautiful Aerial Wedding Shots</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="service-box car">
+<h4>Car/Bike Shoot</h4>
+<p>Beautiful Aerial Wedding Shots</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="service-box event">
+<h4>Event Shoot</h4>
+<p>Beautiful Aerial Wedding Shots</p>
+</div>
+</div>
+
 </div>
 
 </section>
@@ -297,7 +421,7 @@ z-index:999;
 <section class="container section-space">
 
 
-<h2 class="text-center mb-5">Gallery</h2>
+<h2 class="text-center mb-5"><b>Gallery</b></h2>
 
 <div class="row gallery">
 
@@ -323,7 +447,7 @@ z-index:999;
 
 <section class="container section-space">
 
-<h2 class="text-center mb-5">Packages</h2>
+<h2 class="text-center mb-5"><b>Packages</b></h2>
 
 <div class="row g-4">
 
@@ -370,7 +494,7 @@ z-index:999;
 
 <h2>Locations</h2>
 
-<p>Belagutti | Nyamathi | Shivamogga | Bangalore | Davanagere</p>
+<p><b>Belagutti | Nyamathi | Shivamogga | Bangalore | Davanagere</b></p>
 
 </div>
 
@@ -380,11 +504,11 @@ z-index:999;
 
 <section id="contact" class="container section-space text-center">
 
-<h2>Contact Us</h2>
+<h2><b>Contact Us</b></h2>
 
 
 
-<p>📞 Phone: 7892443608</p>
+<p>📞 Phone: <b>7892443608</b></p>
 
 <a class="Instagram" href="https://www.instagram.com/rk_peace_fighter?igsh=MWRxaWN5c2t3OTlqbA==" target="_blank" title="Instagram">
     <img src="instagram.png" width="40">
@@ -407,4 +531,3 @@ target="_blank">
 
 </body>
 </html>
-
