@@ -3,6 +3,8 @@
 
 <head>
 
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <meta charset="UTF-8">
@@ -22,6 +24,94 @@ color:white;
 color:rgba(0,255,255,0.8);
 margin-left:5px;
 }
+
+.navbar-brand{
+font-size:20px;
+}
+
+
+.hero-title{
+font-family: 'Cinzel', serif;
+font-size:60px;
+font-weight:700;
+letter-spacing:3px;
+opacity:0;
+transform:translateY(40px);
+transition:1s;
+}
+
+.hero-images{
+color:white;
+}
+
+.hero-studio{
+color:rgba(0,255,255,0.8);
+margin-left:8px;
+}
+
+/* Subtitle */
+.hero-subtitle{
+opacity:0;
+transition:1s;
+}
+
+/* Button */
+.hero-btn{
+opacity:0;
+transition:1s;
+}
+
+.hero{
+height:100vh;
+min-height:500px;
+}
+
+.hero-content{
+width:90%;
+}
+
+@media (max-width:768px){
+.hero{
+height:70vh;
+}
+
+.hero-content{
+width:100%;
+padding:0 10px;
+}
+}
+
+.hero video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.mehendi-video video{
+width:100%;
+height:auto;
+}
+
+/* Show Animation */
+.show{
+opacity:1 !important;
+transform:translateY(0) !important;
+}
+
+/* Hide Animation */
+.hide{
+opacity:0 !important;
+transform:translateY(-40px) !important;
+}
+
+/* Mobile */
+@media (max-width:768px){
+.hero-title{
+font-size:32px;
+}
+}   
+
+
 
     .hero-content{
 animation:fadeUp 2s ease;
@@ -146,7 +236,9 @@ border-radius:15px;
     @media (max-width:768px){
 
 .service-box{
-height:200px;
+min-height:220px;
+height:auto;
+padding:20px;
 }
 
 .locations{
@@ -246,20 +338,100 @@ background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("bike.jpg"
 background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("event.jpg");
 }
 
+.gallery-scroll img{
+height:180px;
+}
 
+@media (max-width:768px){
+.gallery-scroll img{
+height:140px;
+}
+}
+
+
+
+
+.gallery-wrapper{
+position:relative;
+}
+
+.gallery-scroll{
+display:flex;
+overflow-x:auto;
+gap:15px;
+scroll-behavior:smooth;
+padding:10px;
+}
+
+.gallery-scroll img{
+height:220px;
+border-radius:10px;
+flex-shrink:0;
+transition:0.3s;
+}
+
+.gallery-scroll img:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(0,255,255,0.8);
+}
+
+.gallery-scroll::-webkit-scrollbar{
+display:none;
+}
+
+
+.mehendi-title{
+font-family: 'Great Vibes', cursive;
+font-size:50px;
+color:rgba(0,255,255,0.8);
+text-shadow:0 0 10px rgba(0,255,255,0.7);
+}
+
+.mehendi-video video{
+width:100%;
+max-width:800px;
+border-radius:15px;
+box-shadow:0 0 30px rgba(0,255,255,0.6);
+}
+
+@media (max-width:768px){
+.mehendi-title{
+font-size:32px;
+}
+}
+
+
+
+/* Buttons */
+.scroll-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.6);
+color:white;
+border:none;
+padding:10px 15px;
+cursor:pointer;
+z-index:10;
+}
+
+.scroll-btn.left{
+left:0;
+}
+
+.scroll-btn.right{
+right:0;
+}
+
+/* Grid hover */
 .gallery img{
 transition:0.4s;
+border-radius:10px;
 }
 
 .gallery img:hover{
 transform:scale(1.05);
 box-shadow:0 0 25px rgba(0,255,255,0.8);
-}
-
-
-.gallery img{
-width:100%;
-border-radius:10px;
 }
 
 
@@ -310,6 +482,63 @@ overflow:hidden;
 background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("location.jpg");
 }
 
+
+.contact-form{
+background:#111;
+padding:25px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,255,255,0.3);
+}
+
+.contact-form .form-control{
+background:#000;
+border:1px solid rgba(0,255,255,0.5);
+color:white;
+}
+
+.contact-form .form-control:focus{
+box-shadow:0 0 10px rgba(0,255,255,0.8);
+border-color:rgba(0,255,255,0.8);
+}
+
+.contact-form button{
+font-weight:bold;
+}
+
+.footer p{
+font-size:14px;
+}
+
+.footer h4{
+font-size:22px;
+}
+
+.footer{
+background:#000;
+padding:40px 0;
+color:white;
+}
+
+.footer h5{
+margin-bottom:15px;
+text-align: center;
+font-style: normal;
+}
+
+.footer a{
+color:white;
+text-decoration:none;
+}
+
+.footer a:hover{
+color:rgba(0,255,255,0.8);
+}
+
+.footer i{
+font-size:22px;
+margin-right:10px;
+}
+
 .whatsapp{
 position:fixed;
 bottom:20px;
@@ -323,12 +552,15 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 z-index:999;
 }
 
+
     
 
 
 </style>
 
 </head>
+
+
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
 
@@ -342,6 +574,41 @@ navbar.classList.toggle("scrolled", window.scrollY > 50);
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
 <body>
+
+    <script>
+
+window.addEventListener("load", function(){
+
+const title = document.querySelector(".hero-title");
+const subtitle = document.querySelector(".hero-subtitle");
+const btn = document.querySelector(".hero-btn");
+
+/* After 9 sec → show */
+setTimeout(()=>{
+title.classList.add("show");
+subtitle.classList.add("show");
+btn.classList.add("show");
+}, 2000);
+
+/* After 11 sec →  */
+setTimeout(()=>{
+title.classList.remove("show");
+title.classList.add("hide");
+
+subtitle.classList.remove("show");
+subtitle.classList.add("hide");
+
+btn.classList.remove("show");
+btn.classList.add("hide");
+}, 3000);
+
+});
+
+</script>
+
+
+
+
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 <div class="container">
@@ -399,15 +666,14 @@ navbar.classList.toggle("scrolled", window.scrollY > 50);
 
 <div class="hero-content">
 
-    
+<h1 class="hero-title animate-title">
+  <span class="hero-images">Images</span>
+  <span class="hero-studio">Studio</span>
+</h1>
 
-<h1>Images Studio</h1>
+<p class="hero-subtitle">Capturing Your Beautiful Moments</p>
 
-<p><b>Capturing Your Beautiful Moments</b></p>
-
-
-
-<a href="#contact" class="btn btn-info btn-lg"><b>Book Now</b></a>
+<!-- <a href="#contact" class="btn btn-info btn-lg hero-btn">Book Now</a> -->
 
 </div>
 
@@ -524,29 +790,124 @@ navbar.classList.toggle("scrolled", window.scrollY > 50);
 
 <h2 class="text-center mb-5"><b>Gallery</b></h2>
 
+<!-- 🔥 Scroll Highlight Gallery -->
+<div class="gallery-wrapper mb-5">
+
+<button class="scroll-btn left" onclick="scrollGallery(-300)">
+<i class="fa-solid fa-angle-left"></i>
+</button>
+
+<div class="gallery-scroll" id="galleryScroll">
+
+<a href="photo1.jpeg" data-lightbox="gallery">
+<img src="photo1.jpeg">
+</a>
+
+<a href="photo12.jpg" data-lightbox="gallery">
+<img src="photo12.jpg">
+</a>
+
+<a href="photo4.jpeg" data-lightbox="gallery">
+<img src="photo4.jpeg">
+</a>
+
+<a href="photo13.jpg" data-lightbox="gallery">
+<img src="photo13.jpg">
+</a>
+
+<a href="photo14.jpg" data-lightbox="gallery">
+<img src="photo14.jpg">
+</a>
+
+<a href="photo11.jpg" data-lightbox="gallery">
+<img src="photo11.jpg">
+</a>
+
+<a href="photo8.jpg" data-lightbox="gallery">
+<img src="photo8.jpg">
+</a>
+
+<a href="photo13.jpg" data-lightbox="gallery">
+<img src="photo13.jpg">
+</a>
+
+<a href="photo3.jpeg" data-lightbox="gallery">
+<img src="photo3.jpeg">
+</a>
+
+<a href="photo9.jpg" data-lightbox="gallery">
+<img src="photo9.jpg">
+</a>
+
+
+</div>
+
+<button class="scroll-btn right" onclick="scrollGallery(300)">
+<i class="fa-solid fa-angle-right"></i>
+</button>
+
+</div>
+
+<!-- 📸 Grid Gallery -->
 <div class="row gallery">
 
-<div class="col-md-4 mb-3">
-<a href="photo1.jpeg" data-lightbox="gallery">
-<img src="photo1.jpeg" class="img-fluid">
+<div class="col-6 col-md-4 mb-3">
+<a href="photo6.jpg" data-lightbox="gallery">
+<img src="photo6.jpg" class="img-fluid">
 </a>
 </div>
 
-<div class="col-md-4 mb-3">
-<a href="photo3.jpeg" data-lightbox="gallery">
-<img src="photo3.jpeg" class="img-fluid">
+<div class="col-6 col-md-4 mb-3">
+<a href="photo5.jpg" data-lightbox="gallery">
+<img src="photo5.jpg" class="img-fluid">
 </a>
 </div>
 
-<div class="col-md-4 mb-3">
-<a href="photo2.jpeg" data-lightbox="gallery">
-<img src="photo2.jpeg" class="img-fluid">
+<div class="col-6 col-md-4 mb-3">
+<a href="photo7.jpg" data-lightbox="gallery">
+<img src="photo7.jpg" class="img-fluid">
+</a>
+</div>
+
+<div class="col-6 col-md-4 mb-3">
+<a href="photo9.jpg" data-lightbox="gallery">
+<img src="photo9.jpg" class="img-fluid">
+</a>
+</div>
+
+<div class="col-6 col-md-4 mb-3">
+<a href="photo10.JPG" data-lightbox="gallery">
+<img src="photo10.JPG" class="img-fluid">
+</a>
+</div>
+
+<div class="col-6 col-md-4 mb-3">
+<a href="photo11.jpg" data-lightbox="gallery">
+<img src="photo11.jpg" class="img-fluid">
 </a>
 </div>
 
 </div>
 
 </section>
+
+
+<!-- Mehendi Video -->
+
+
+<section class="container section-space text-center">
+
+<h2 class="mehendi-title mb-4">Mehendi Moments</h2>
+
+<div class="mehendi-video">
+<video controls autoplay muted loop playsinline>
+<source src="mehendi.mp4" type="video/mp4">
+</video>
+</div>
+
+</section>
+
+
 
 <!-- PACKAGES -->
 
@@ -609,21 +970,97 @@ navbar.classList.toggle("scrolled", window.scrollY > 50);
 
 <!-- CONTACT -->
 
-<section id="contact" class="container section-space text-center">
+<section id="contact" class="container section-space">
 
-<h2><b>Contact Us</b></h2>
+<h2 class="text-center mb-5"><b>Contact Us</b></h2>
+
+<div class="row justify-content-center">
+<div class="col-md-6">
+
+<form class="contact-form">
+
+<div class="mb-3">
+<input type="text" class="form-control" placeholder="Your Name" required>
+</div>
+
+<div class="mb-3">
+<select class="form-control" required>
+<option value="">Select Shoot Type</option>
+<option>Engagement</option>
+<option>Pre Wedding</option>
+<option>Wedding Photography</option>
+<option>Cinematic Videography</option>
+<option>Drone Shoot</option>
+<option>Maternity</option>
+<option>Baby Shoot</option>
+<option>Naming Ceremony</option>
+<option>Birthday</option>
+<option>House Warming</option>
+<option>Car/Bike Shoot</option>
+<option>Event Shoot</option>
+</select>
+</div>
 
 
+<div class="mb-3">
+<textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+</div>
 
-<p>📞 Phone: <b>7892443608</b></p>
+<button type="submit" class="btn btn-info w-100">
+Submit
+</button>
 
-<a class="Instagram" href="https://www.instagram.com/rk_peace_fighter?igsh=MWRxaWN5c2t3OTlqbA==" target="_blank" title="Instagram">
-    <img src="instagram.png" width="40">
-</a>
+</form>
 
-<!-- <p>📷 Instagram: @royalweddingfilms</p> -->
+</div>
+</div>
 
 </section>
+
+<!-- __ Footer __ -->
+
+<footer class="footer">
+<div class="container">
+<div class="row text-center text-md-start">
+
+<!-- About -->
+<div class="col-md-4 mb-4 text-center">
+<h4><span class="logo-images">Images</span> <span class="logo-studio">Studio</span></h4>
+<p>Capturing your beautiful moments with creativity and passion.</p>
+</div>
+
+<!-- Quick Links -->
+<div class="col-md-4 mb-4 text-center">
+<h5>Quick Links</h5>
+<ul class="list-unstyled">
+<li><a href="#services">Services</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#packages">Packages</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+
+<!-- Contact -->
+<div class="col-md-4 mb-4 text-center">
+<h5>Contact</h5>
+
+<p>📞 7892443608</p>
+
+<a href="https://www.instagram.com/rk_peace_fighter" target="_blank"> 
+<i class="fa-brands fa-instagram"></i>Instagram
+</a>
+</div>
+
+</div>
+
+<hr style="border-color: rgba(255,255,255,0.2);">
+
+<p class="text-center mb-0">
+© 2026 Images Studio | Designed by Shashanka
+</p>
+
+</div>
+</footer>
 
 <!-- WHATSAPP BUTTON -->
 
@@ -633,7 +1070,41 @@ target="_blank">
     <img src="whatsapp.svg" width="40">
 </a>
 
+<script>
+function scrollGallery(value){
+document.getElementById("galleryScroll").scrollBy({
+left: value,
+behavior: 'smooth'
+});
+}
+</script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const form = document.querySelector(".contact-form");
+
+form.addEventListener("submit", function(e){
+e.preventDefault();
+
+let name = document.querySelector("input[placeholder='Your Name']").value;
+let shoot = document.querySelector("select").value;
+let message = document.querySelector("textarea").value;
+
+let whatsappMessage = `Hello Images Studio, I saw your photography website and I am interested in booking a shoot. Please share details about packages and availability?
+
+Name: ${name}
+Shoot Type: ${shoot}
+Message: ${message}`;
+
+let url = "https://wa.me/917892443608?text=" + encodeURIComponent(whatsappMessage);
+
+window.open(url, "_blank");
+
+});
+
+});
+</script>
 
 
 </body>
